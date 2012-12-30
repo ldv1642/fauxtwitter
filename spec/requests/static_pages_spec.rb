@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+	let(:title) {"Faux Twitter |"}
+
 	describe "Home page" do
 		it "should have a h1 containing 'Home'" do
 			visit '/static_pages/home'
@@ -11,7 +13,7 @@ describe "Static pages" do
 		it "should have the right title" do
 			visit '/static_pages/home'
 			page.should have_selector('title', 
-				:text => "Faux Twitter | Home")
+				:text => "#{title} Home")
 		end
 	end
 
@@ -24,7 +26,7 @@ describe "Static pages" do
 		it "should the right title" do
 			visit '/static_pages/help'
 			page.should have_selector('title',
-				:text => "Faux Twitter | Help")
+				:text => "#{title} Help")
 		end
 	end
 
@@ -37,7 +39,20 @@ describe "Static pages" do
 		it "should have the right title" do
 			visit '/static_pages/about'
 			page.should have_selector('title',
-				:text => "Faux Twitter | About")
+				:text => "#{title} About")
+		end
+	end
+
+	describe "Contact page" do
+		it "should have the right title" do
+			visit '/static_pages/contact'
+			page.should have_selector('title',
+				:text => "Faux Twitter | Contact")
+		end
+		it "should have a h1 containing 'Contact'" do
+			visit '/static_pages/contact'
+			page.should have_selector('h1',
+				:text => "Contact")
 		end
 	end
 
