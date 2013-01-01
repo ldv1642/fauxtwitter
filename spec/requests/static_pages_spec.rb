@@ -13,7 +13,12 @@ describe "Static pages" do
 		it "should have the right title" do
 			visit '/static_pages/home'
 			page.should have_selector('title', 
-				:text => "#{title} Home")
+				:text => "Faux Twitter")
+		end
+		it "should not have page title in title" do
+			visit '/static_pages/home'
+			page.should_not have_selector('title',
+				:text => "| Home")
 		end
 	end
 
@@ -56,4 +61,14 @@ describe "Static pages" do
 		end
 	end
 
+end
+
+describe 'Misc pages' do
+	describe 'Cheatsheet page' do
+		it "should have a h1 containing 'CheatSheet'" do
+			visit '/misc/cheatsheet'
+			page.should have_selector('h1',
+				:text => "CheatSheet")
+		end
+	end
 end

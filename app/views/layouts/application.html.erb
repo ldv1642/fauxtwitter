@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Faux Twitter | <%= yield(:title) %></title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+  	body
+  	{
+  		font-family: Helvetica;
+  	}	
+  	#cheatsheet table
+  	{
+  		border: 1px solid grey;
+  		border-radius: 5px;
+  		padding:5px;
+  	}
+  	#cheatsheet table tr
+  	{
+
+  	}
+  	#cheatsheet table tr td
+	{
+  		width: 250px;
+		vertical-align:top;
+  	}
+  </style>
 </head>
 <body>
 
