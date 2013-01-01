@@ -88,10 +88,12 @@ footer {
   color: $grayLight;
   a
   {
+    
   	color: #555;	
   	&:hover
   	{
-	  color: #222;  		
+	   color: #222;		
+     text-decoration: none;
   	}
   }
 
