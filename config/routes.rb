@@ -1,4 +1,6 @@
 GenericApp::Application.routes.draw do
+  match '/signup', to: 'users#new'
+
   match '/cheat', to: 'misc#cheatsheet'
   root to: 'static_pages#home'
   match '/help', to: 'static_pages#help'
