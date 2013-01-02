@@ -1,3 +1,4 @@
+include ApplicationHelper
 require 'spec_helper'
 
 describe "Static pages" do
