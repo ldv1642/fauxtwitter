@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+#test the full_title function in ApplicationHelper module
 describe ApplicationHelper do
 	describe "full_title" do
 		it "should include the page title" do
